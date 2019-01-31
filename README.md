@@ -1,24 +1,60 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##  :gem: Project Title - RAILS/DOGBNB
 
-Things you may want to cover:
+Holà Correctorios! Voici notre HACKING DOGBNB !
 
-* Ruby version
+<p align="center">
+  <img width="460" height="300" src="https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif">
+</p>
 
-* System dependencies
 
-* Configuration
+## :fireworks: How does it work ?
 
-* Database creation
+Comment runner notre magnifique application :  
 
-* Database initialization
+1/ Clone the github : git clone https://github.com/Saroumoun/Airbnb_chiens  
 
-* How to run the test suite
+```
+git clone https://github.com/Saroumoun/Airbnb_chiens
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+2/ Ajoute les gems : fais un Bundle Install  
 
-* Deployment instructions
 
-* ...
+```
+bundle install
+```
+
+3/ Lance les associations : rails db:migrate  
+
+```
+rails db:migrate
+```
+
+4/ Lance le fichier seed : rails db:seed  
+
+```
+rails db:seed
+```
+
+5/ Amuse-toi avec la console ! :smile:  
+
+
+
+## :dog: Details 
+
+Notre application est composé de 4 modèles Dog, Dogsitter, Stroll et City
+* Dog lié à City avec name, breed, city_id comme attributs ;
+* Dogsitter lié à City avec first_name, last_name, city_id comme attributs ;
+* Stroll lié à Dog et Dogsitter, avec date, dog_id, dogsitter_id comme attributs;
+* City avec town comme attribut.
+
+
+## :heart: Built by : 
+
+Viviane de Petigny  
+Bastien Hiel  
+Gregoria Ndongozi  
+Mélanie Nguon  
+
+Bisous!
