@@ -8,17 +8,21 @@
 
 require 'faker'
 
+City.destroy_all
 Dog.destroy_all
 Dogsitter.destroy_all
 Stroll.destroy_all
 
-
-10.times do
- dog = Dog.create(breed: Faker::Dog.breed, name: Faker::Dog.name)
+3.times do
+  city = City.create(town: Faker::Address.city)
 end
 
 10.times do
-	dogsitter = Dogsitter.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name)
+ dog = Dog.create(breed: Faker::Dog.breed, name: Faker::Dog.name, city: City.all.sample)
+end
+
+10.times do
+	dogsitter = Dogsitter.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name, city: City.all.sample)
 end
 
 10.times do
