@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+Dog.destroy_all
+Dogsitter.destroy_all
+Stroll.destroy_all
+
+
+10.times do
+ dog = Dog.create(breed: Faker::Dog.breed, name: Faker::Dog.name)
+end
+
+10.times do
+	dogsitter = Dogsitter.create(first_name: Faker::Name.first_name,last_name: Faker::Name.last_name)
+end
+
+10.times do
+	stroll = Stroll.create(date: Faker::Date.forward(23),dog: Dog.all.sample, dogsitter: Dogsitter.all.sample)
+end
